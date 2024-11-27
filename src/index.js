@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
    * @param {Event} e - The form submission event object.
    * @returns {void}
 
-    }
    */
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -29,12 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
     ).value;
 
     const taskList = document.querySelector("#tasks");
-    // creates new list item w/i HTML... provides proper formatting to log user input.
+    // creates new element 'list item'("li") w/i HTML... provides proper
+    // formatting to log/display user input.
+    // ***CRUD equivalent -> 'Create'***
     const newTask = document.createElement("li");
     newTask.textContent = taskDescription;
-    // appends (CRUD equivalent to 'Update') new event, and adds it to the task list.
+    // appends the new event, and adds it to the task list
+    // ***CRUD equivalent -> 'Update'***
     taskList.appendChild(newTask);
-    // probably not necessary as we are communicating via mock server XD
+
     form.reset();
   });
 });

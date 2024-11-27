@@ -11,3 +11,5 @@
 3. What do we want to occur when that event fires?
    [] - I expect to see the task string that I provided appear in the DOM after the submit button
    has been activated.
+
+<!-- document.querySelector(h1.addEventListener) => {} -->
